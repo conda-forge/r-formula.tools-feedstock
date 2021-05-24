@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: formula.tools_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/formula.tools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/formula.tools/formula.tools_{{ version }}.tar.gz
   sha256: 4fe0e72d9d96f2398e86cbd8536d0c84de38e5583d4ff7dcd73f415ddd8ca395
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 1003
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,20 +37,16 @@ test:
 
 about:
   home: https://github.com/decisionpatterns/formula.tools
-  license: GPL-2
+  license: GPL-2.0-only
   summary: 'These utilities facilitate the programmatic manipulations of formulas, expressions,
     calls, assignments and other R language objects.  These objects all share the same
     structure: a left-hand side, operator and  right-hand side. This packages provides
     methods for accessing and  modifying this structures as well as extracting and replacing
     names and  symbols from these objects.'
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
