@@ -1,11 +1,11 @@
-About r-formula.tools
-=====================
+About r-formula.tools-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-formula.tools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/decisionpatterns/formula.tools
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-formula.tools-feedstock/blob/main/LICENSE.txt)
 
 Summary: These utilities facilitate the programmatic manipulations of formulas, expressions, calls, assignments and other R language objects.  These objects all share the same structure: a left-hand side, operator and  right-hand side. This packages provides methods for accessing and  modifying this structures as well as extracting and replacing names and  symbols from these objects.
 
